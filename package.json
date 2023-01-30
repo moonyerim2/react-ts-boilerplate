@@ -1,0 +1,31 @@
+{
+  "name": "petmo-design-system",
+  "version": "1.0.0",
+  "description": "design system for petmo project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonyerim2/petmo-deaign-system.git"
+  },
+  "keywords": ["design system", "components", "UI"],
+  "author": "moon yerim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moonyerim2/petmo-deaign-system/issues"
+  },
+  "homepage": "https://github.com/moonyerim2/petmo-deaign-system#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "storybook": "^6.5.16",
+    "typescript": "^4.9.4"
+  }
+}
