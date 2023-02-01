@@ -4,7 +4,9 @@
   "description": "design system for petmo project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development webpack serve --open --hot --progress",
+    "start": "cross-env NODE_ENV=development webpack --progress",
+    "build": "cross-env NODE_ENV=production webpack --progress"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
   "devDependencies": {
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
