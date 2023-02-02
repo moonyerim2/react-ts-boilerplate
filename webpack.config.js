@@ -1,6 +1,8 @@
 require("dotenv").config();
 
 const path = require("path");
+const webpack = require("webpack");
+const childProcess = require("child_process");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const isProd = process.env.NODE_ENV === "production";
@@ -44,6 +46,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "public", "index.html"),
       hash: true,
+    }),
+    new webpack.BannerPlugin({
+      banner: `
+      Build Data: ${new Date().toLocaleString()}
+      Commit Version: ${childProcess.execSync("git rev-parse --short HEAD")}
+      Author: ${childProcess.execSync("git config user.name")}
+    `,
     }),
   ],
   devServer: {
