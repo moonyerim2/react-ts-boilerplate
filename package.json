@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/moonyerim2/petmo-deaign-system#readme",
   "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
