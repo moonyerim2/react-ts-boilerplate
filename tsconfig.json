@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "./dist/",
     "target": "es5",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "esnext",
@@ -20,7 +21,6 @@
     "noImplicitThis": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "noEmit": true,
     "noEmitOnError": true,
     "noUnusedLocals": true,
     "downlevelIteration": true

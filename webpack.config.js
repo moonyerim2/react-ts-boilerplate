@@ -14,7 +14,7 @@ module.exports = {
   entry: "./src/index.tsx",
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.join(__dirname, "/dist"),
   },
   resolve: {
     modules: ["node_modules"],
@@ -25,9 +25,6 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         loader: "ts-loader",
-        options: {
-          transpileOnly: isProd ? false : true,
-        },
       },
       {
         test: /\.css?$/,
@@ -42,9 +39,19 @@ module.exports = {
       },
     ],
   },
-  plugin: [
+  plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "public", "index.html"),
+      template: "./src/index.html",
+      templateParameters: {
+        env: process.env.NODE_ENV === "development" ? "(개발용)" : "",
+      },
+      minify:
+        process.env.NODE_ENV === "production"
+          ? {
+              collapseWhitespace: true,
+              removeComments: true,
+            }
+          : false,
       hash: true,
     }),
     new webpack.BannerPlugin({
@@ -56,14 +63,12 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, "public"),
+    static: { directory: path.join(__dirname, "dist") },
     host: "localhost",
     port: PORT,
-    open: true,
-    hot: true,
-    compress: true,
     historyApiFallback: true,
-    overlay: true,
-    stats: "errors-only",
+    client: {
+      overlay: true,
+    },
   },
 };
