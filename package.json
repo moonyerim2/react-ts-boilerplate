@@ -1,7 +1,7 @@
 {
-  "name": "petmo-design-system",
+  "name": "react-ts-boilerplate",
   "version": "1.0.0",
-  "description": "design system for petmo project",
+  "description": "react-ts-boilerplate",
   "main": "index.js",
   "scripts": {
     "server": "cross-env NODE_ENV=development webpack serve --open --hot --progress",
@@ -10,19 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moonyerim2/petmo-deaign-system.git"
+    "url": "git+https://github.com/moonyerim2/react-ts-boilerplate.git"
   },
   "keywords": [
-    "design system",
-    "components",
-    "UI"
+    "react",
+    "typescript",
+    "boilerplate"
   ],
   "author": "moon yerim",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/moonyerim2/petmo-deaign-system/issues"
+    "url": "https://github.com/moonyerim2/react-ts-boilerplate/issues"
   },
-  "homepage": "https://github.com/moonyerim2/petmo-deaign-system#readme",
+  "homepage": "https://github.com/moonyerim2/react-ts-boilerplate#readme",
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "dotenv": "^16.0.3",
